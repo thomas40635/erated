@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>WATCHIZ - {% block title %}{% endblock %}</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block css_content %}
+
+    {% endblock %}
+    {% block javascript_content %}
+
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/var.css' %}">
+</head>
+<body>
+<header>
+    <section class="header-left-part">
+        <img src="{% static 'img/global/logo.png' %}" alt="logo" class="logo">
+        <nav>
+            <ul>
+                <li>Liste des films</li>
+                <li>Nouveautés</li>
+                <li>Catégories</li>
+                <li>Réalisateurs</li>
+                <li>Top 2019</li>
+                <li class="high-link">Movie generator</li>
+                <li>Aide</li>
+            </ul>
+        </nav>
+    </section>
+    <section class="header-right-part">
+        <button class="small-button secondary-button full-rounded-box">Se connecter</button>
+    </section>
+</header>
+<main>
+{% block main_content %}
+
+{% endblock %}
+</main>
+<div class="background-container">
+    <div class="background-radial-gradient"></div>
+    <div class="background-filter"></div>
+    <div class="background-img">
+        <img src="{% static 'img/global/background-test.png' %}" alt="background">
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+/* FONTS */
+
+@font-face {
+    font-family: "Whitney";
+    src: url("../font/WhitneyBook.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Whitney";
+    src: url("../font/WhitneyBold.ttf");
+    font-weight: 900;
+}
+
+/* GLOBAL */
+
+html, body{
+    width: 100%;
+    min-height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Whitney", serif;
+    box-sizing: border-box;
+}
+
+/* MAIN HEADER */
+
+body > header{
+    padding: 30px;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+body > header > section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+body > header > section.header-left-part{
+    flex: 1;
+}
+
+body > header > section.header-right-part{
+    justify-content: flex-end;
+    margin-left: 30px;
+}
+
+body > header nav{
+    margin-left: 30px;
+}
+
+body > header nav ul li{
+    list-style: none;
+    display: inline-block;
+    color: var(--secondary-text-color);
+    margin-left: 30px;
+    font-size: 16px;
+}
+
+body > header nav ul li:first-child{
+    margin-left: 0;
+}
+
+body > header nav ul li.high-link{
+    color: var(--primary-text-color);
+}
+
+/* BOUTONS */
+
+button{
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.small-button{
+    padding: 6px 18px;
+}
+
+.big-button{
+    padding: 20px 25px;
+}
+
+.secondary-button{
+    background: transparent;
+    border: 2px solid #fff;
+    color: var(--primary-text-color);
+    font-size: 16px;
+}
+
+.full-rounded-box{
+    border-radius: 100px;
+}
+
+/* BACKGROUND */
+
+.background-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:0;
+}
+
+.background-radial-gradient, .background-filter, .background-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.background-radial-gradient{
+    background: var(--background-radial-gradient);
+    z-index:3;
+}
+
+.background-filter{
+    background: var(--background-filter);
+    z-index:2;
+}
+
+.background-img{
+    z-index:1;
+}
+
+.background-img img{
+    filter: saturate(0.2);
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
