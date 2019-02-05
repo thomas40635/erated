@@ -60,10 +60,6 @@ body > header > section.header-right-part{
     margin-left: 30px;
 }
 
-body > header nav{
-    margin-left: 30px;
-}
-
 body > header nav ul li{
     list-style: none;
     display: inline-block;
@@ -78,6 +74,38 @@ body > header nav ul li:first-child{
 
 body > header nav ul li.high-link{
     color: var(--primary-text-color);
+}
+
+.header-left-part .separator{
+    width:2px;
+    height:10px;
+    background: var(--secondary-text-color);
+    margin:0 30px;
+}
+
+.header-right-part .separator{
+    width:2px;
+    height:10px;
+    background: var(--secondary-text-color);
+    margin:0 20px;
+}
+
+.translate-button-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.translate-button-container .arrow{
+    position: relative;
+    width: 6px;
+    height:6px;
+    background: transparent;
+    border-bottom:1px solid #fff;
+    border-right:1px solid #fff;
+    transform: rotate(45deg);
+    margin-left: 10px;
 }
 
 /* BOUTONS */
