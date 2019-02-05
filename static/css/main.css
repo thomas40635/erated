@@ -33,9 +33,14 @@ body {
     box-sizing: border-box;
 }
 
+button{
+    cursor: pointer;
+}
+
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 .page-limiter {
@@ -164,7 +169,7 @@ button {
 }
 
 .primary-button {
-    background: #f16e2e;
+    background: #ee3856;
     color: var(--primary-text-color);
     font-size: 16px;
 }
@@ -179,6 +184,13 @@ button {
     background: transparent;
     border: 2px solid #fff;
     color: var(--primary-text-color);
+    font-size: 16px;
+}
+
+.red-button {
+    background: transparent;
+    border: 2px solid #ee3856;
+    color: #ee3856;
     font-size: 16px;
 }
 
@@ -262,4 +274,25 @@ p {
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+/* FORMS */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label{
+    font-size:12px;
+}
+
+form input{
+    background: transparent;
+    color: var(--primary-text-color);
+    border: 2px solid #fff;
+    border-radius: 3px;
+    min-width: 200px;
+    padding: 16px 25px;
+    margin-bottom: 20px;
 }

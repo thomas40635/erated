@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+    Inscription
+{% endblock %}
+{% block main_content %}
+    <div class="page-limiter">
+        <h1>S'inscrire</h1>
+    </div>
+    <div class="page-limiter">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="big-button white-button rounded-box">Valider</button>
+        </form>
+    </div>
+{% endblock %}

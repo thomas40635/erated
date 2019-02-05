@@ -28,7 +28,7 @@
         <nav class="on-desktop">
             <ul>
                 <li>
-                    <a href="{% url 'liste_films_view' %}">Liste des films</a>
+                    <a href="{% url 'list_movies_view' %}">Liste des films</a>
                 </li>
                 <li>
                     <a href="">Nouveautés</a>
@@ -52,7 +52,15 @@
         </nav>
     </section>
     <section class="header-right-part">
-        <button class="small-button secondary-button full-rounded-box">Se connecter</button>
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout_view' %}">
+            <button class="small-button red-button full-rounded-box">Se déconnecter</button>
+        </a>
+        {% else %}
+        <a href="{% url 'login_view' %}">
+            <button class="small-button secondary-button full-rounded-box">Se connecter</button>
+        </a>
+        {% endif %}
         <div class="separator"></div>
         <div class="translate-button-container">
             <img src="{% static 'img/global/icon/translate.svg' %}" alt="">

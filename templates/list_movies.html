@@ -6,4 +6,9 @@
     <div class="page-limiter">
         <h1>Liste des films</h1>
     </div>
+    <div class="movies-container">
+        {% for movie in object_list %}
+            <h1>{{ movie.titre }}</h1>
+        {% endfor %}
+    </div>
 {% endblock %}

@@ -4,7 +4,7 @@
 {% endblock %}
 {% block main_content %}
     <div class="page-limiter">
-        <h1>Des milliers de films à noter ou découvrir.</h1>
+        <h1>Des milliers de films à noter et découvrir.</h1>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nibh pellentesque, consequat odio quis,
             malesuada tellus. Donec suscipit, nunc non luctus tristique, lorem sem vehicula metus, a dignissim lectus
@@ -12,9 +12,13 @@
             tempus in, elementum vel lorem.
         </p>
         <div class="align-items">
-            <button class="big-button white-button rounded-box">Créer un compte</button>
+            <a href="{% url 'signup_view' %}">
+                <button class="big-button white-button rounded-box">Créer un compte</button>
+            </a>
             <div class="h-space"></div>
-            <button class="big-button primary-button rounded-box">Se connecter</button>
+            <a href="{% url 'login_view' %}">
+                <button class="big-button primary-button rounded-box">Se connecter</button>
+            </a>
         </div>
     </div>
 {% endblock %}
