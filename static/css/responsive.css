@@ -1,0 +1,37 @@
+@media (max-width: 1260px) {
+    .on-mobile {
+        display: block;
+    }
+
+    .on-desktop {
+        display: none;
+    }
+}
+
+@media (max-width: 475px) {
+    body > header {
+        flex-direction: column;
+    }
+
+    body > header section.header-left-part {
+        margin-bottom: 30px;
+    }
+
+    body > header section.header-right-part {
+        margin-left: 0;
+    }
+
+    .on-mobile {
+        display: block;
+    }
+
+    .on-desktop {
+        display: none;
+    }
+
+    .align-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

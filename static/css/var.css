@@ -1,6 +1,7 @@
-html{
+html {
     --primary-text-color: #fff;
-    --secondary-text-color: rgba(255,255,255,0.6);
-    --background-filter: rgba(54,57,63,0.95);
-    --background-radial-gradient: radial-gradient(farthest-corner at 50% 25%, transparent, rgba(54,57,63,1));
+    --secondary-text-color: rgba(255, 255, 255, 0.6);
+    --grey-text-color: rgba(38, 38, 43, 1);
+    --background-filter: rgba(38, 38, 43, 0.95);
+    --background-radial-gradient: radial-gradient(farthest-corner at 50% 25%, transparent, rgba(38, 38, 43, 1));
 }

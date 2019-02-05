@@ -16,20 +16,37 @@
     {% endblock %}
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/var.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
 </head>
 <body>
 <header>
     <section class="header-left-part">
-        <img src="{% static 'img/global/logo.png' %}" alt="logo" class="logo">
-        <div class="separator"></div>
-        <nav>
+        <a href="{% url 'index_view' %}">
+            <img src="{% static 'img/global/logo.png' %}" alt="logo" class="logo">
+        </a>
+        <div class="separator on-desktop"></div>
+        <nav class="on-desktop">
             <ul>
-                <li>Liste des films</li>
-                <li>Nouveautés</li>
-                <li>Catégories</li>
-                <li>Réalisateurs</li>
-                <li>Top 2019</li>
-                <li class="high-link">Movie generator</li>
+                <li>
+                    <a href="{% url 'liste_films_view' %}">Liste des films</a>
+                </li>
+                <li>
+                    <a href="">Nouveautés</a>
+                </li>
+                <li>
+                    <a href="">Catégories</a>
+                </li>
+                <li>
+                    <a href="">Réalisateurs</a>
+                </li>
+                <li>
+                    <a href="">Top 2019</a>
+                </li>
+                <li class="high-link">
+                    <a href="">Movie generator
+                        <div class="new-label">new</div>
+                    </a>
+                </li>
                 <li>Aide</li>
             </ul>
         </nav>
@@ -44,9 +61,9 @@
     </section>
 </header>
 <main>
-{% block main_content %}
+    {% block main_content %}
 
-{% endblock %}
+    {% endblock %}
 </main>
 <div class="background-container">
     <div class="background-radial-gradient"></div>
