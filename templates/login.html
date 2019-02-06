@@ -6,10 +6,12 @@
     <div class="page-limiter">
         <h1>Se connecter</h1>
     </div>
-    <form method="post" role="form" action="/connexion/">
-        {% csrf_token %}
-        <input type="text" name="username" placeholder="Utilisateur">
-        <input type="password" name="password" placeholder="Mot de passe">
-        <button type="submit" class="big-button white-button rounded-box">Valider</button>
-    </form>
+    <div class="page-limiter">
+        <form method="post" role="form" action="/connexion/">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Utilisateur">
+            <input type="password" name="password" placeholder="Mot de passe">
+            <button type="submit" class="big-button white-button rounded-box">Valider</button>
+        </form>
+    </div>
 {% endblock %}

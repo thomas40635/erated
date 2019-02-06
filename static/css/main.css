@@ -165,7 +165,8 @@ button {
 
 .big-button {
     padding: 16px 25px;
-    min-width: 200px;
+    width: 100%;
+    max-width: 200px;
 }
 
 .primary-button {
@@ -281,6 +282,9 @@ p {
 form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 form label{
@@ -292,7 +296,9 @@ form input{
     color: var(--primary-text-color);
     border: 2px solid #fff;
     border-radius: 3px;
-    min-width: 200px;
+    min-width: 300px;
+    width: 100%;
     padding: 16px 25px;
     margin-bottom: 20px;
+    text-align: center
 }
