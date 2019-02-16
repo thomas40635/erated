@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
     Page d'accueil
 {% endblock %}
@@ -11,14 +12,29 @@
             sapien porttitor purus. Sed porta bibendum est a tempor. Cras sed ligula lorem. Ut ante diam, posuere vitae
             tempus in, elementum vel lorem.
         </p>
-        <div class="align-items">
-            <a href="{% url 'signup_view' %}">
-                <button class="big-button white-button rounded-box">Créer un compte</button>
-            </a>
-            <div class="h-space"></div>
-            <a href="{% url 'login_view' %}">
-                <button class="big-button primary-button rounded-box">Se connecter</button>
-            </a>
-        </div>
+        {% if user.is_authenticated %}
+
+        {% else %}
+            <div class="align-items m-b">
+                <a href="{% url 'signup_view' %}">
+                    <button class="big-button white-button rounded-box">Créer un compte</button>
+                </a>
+                <div class="h-space"></div>
+                <a href="{% url 'login_view' %}">
+                    <button class="big-button primary-button rounded-box">Se connecter</button>
+                </a>
+            </div>
+        {% endif %}
+        <form action="" method="POST" class="align-items search-form">
+            <h1>Recherchez un film</h1>
+            {% csrf_token %}
+            <label for="searchBar">Mot-clés</label>
+            <p class="concat">
+                <input type="search" class="main-search" id="searchBar">
+                <button type="submit" class="button-search">
+                    <img src="{% static 'img/global/icon/search.png' %}" alt="" class="icon-search">
+                </button>
+            </p>
+        </form>
     </div>
 {% endblock %}

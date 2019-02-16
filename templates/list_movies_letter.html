@@ -1,0 +1,15 @@
+{% extends 'list_movies.html' %}
+{% block tri %}
+    <a href="{% url 'list_movies_view' %}">
+        <button class="letter-button letter-button-big {% if selectedLetter is None %}letter-button-actived{% endif %}">
+            TOUS
+        </button>
+    </a>
+    {% for letter in letters %}
+        <a href="{% url 'list_movies_view' letter %}">
+            <button class="letter-button {% if letter == selectedLetter %}letter-button-actived{% endif %}">
+                {{ letter }}
+            </button>
+        </a>
+    {% endfor %}
+{% endblock %}

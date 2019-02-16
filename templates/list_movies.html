@@ -5,10 +5,36 @@
 {% block main_content %}
     <div class="page-limiter">
         <h1>Liste des films</h1>
+        <div class="tri-container">
+            {% block tri %}
+
+            {% endblock %}
+        </div>
     </div>
     <div class="movies-container">
-        {% for movie in object_list %}
-            <h1>{{ movie.titre }}</h1>
-        {% endfor %}
+        {% if object_list %}
+            <div class="list-margin">
+                {% for movie in object_list %}
+                    <a href="{% url 'detail_movie_view' movie.pk %}" data-movie-hover="{{ movie.background }}">
+                        <div class="movie">
+                            <div class="poster">
+                                <img src="{{ movie.poster }}" alt="">
+                            </div>
+                            <div class="infos">
+                                <h1>{{ movie.titre }}</h1>
+                                <span>
+                                    {% for categorie in movie.categories.all %}
+                                        {{ categorie.label }}{% if not forloop.last %} | {% endif %}
+                                    {% endfor %}
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        {% else %}
+            Aucun film trouvé
+        {% endif %}
+
     </div>
 {% endblock %}

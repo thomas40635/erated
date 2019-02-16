@@ -8,9 +8,17 @@
     </div>
     <div class="page-limiter">
         <form method="post">
+            <h1>Bon retour parmis nous !</h1>
+            <p class="subTitle">Nous sommes si heureux de vous revoir !</p>
             {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="big-button white-button rounded-box">Valider</button>
+            <label for="username">Pseudo</label>
+            {{ form.username }}
+            <label for="password1">Mot de passe</label>
+            {{ form.password1 }}
+            <label for="password2">Répéter le mot de passe</label>
+            {{ form.password2 }}
+            <button type="submit" class="m-t">Valider</button>
+            <p>Déjà inscrit ? <a href="{% url 'login_view' %}">Se connecter</a></p>
         </form>
     </div>
 {% endblock %}

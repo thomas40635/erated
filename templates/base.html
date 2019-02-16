@@ -11,12 +11,12 @@
     {% block css_content %}
 
     {% endblock %}
-    {% block javascript_content %}
-
-    {% endblock %}
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/var.css' %}">
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </head>
 <body>
 <header>
@@ -53,13 +53,13 @@
     </section>
     <section class="header-right-part">
         {% if user.is_authenticated %}
-        <a href="{% url 'logout_view' %}">
-            <button class="small-button red-button full-rounded-box">Se déconnecter</button>
-        </a>
+            <a href="{% url 'logout_view' %}">
+                <button class="small-button red-button full-rounded-box">Se déconnecter</button>
+            </a>
         {% else %}
-        <a href="{% url 'login_view' %}">
-            <button class="small-button secondary-button full-rounded-box">Se connecter</button>
-        </a>
+            <a href="{% url 'login_view' %}">
+                <button class="small-button secondary-button full-rounded-box">Se connecter</button>
+            </a>
         {% endif %}
         <div class="separator"></div>
         <div class="translate-button-container">
@@ -77,8 +77,16 @@
     <div class="background-radial-gradient"></div>
     <div class="background-filter"></div>
     <div class="background-img">
-        <img src="{% static 'img/global/background-test.png' %}" alt="background">
+        <img src="" class="dynamic-background" id="dynamicBackground" alt="background">
+        {% if object is not None %}
+            <img src="{{ object.background }}" alt="background">
+        {% else %}
+            <img src="{% static 'img/global/background-test.png' %}" alt="background">
+        {% endif %}
     </div>
 </div>
+{% block javascript_content %}
+
+{% endblock %}
 </body>
 </html>

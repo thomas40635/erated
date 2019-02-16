@@ -1,4 +1,4 @@
-@media (max-width: 1260px) {
+@media (max-width: 1325px) {
     .on-mobile {
         display: block;
     }
@@ -8,7 +8,7 @@
     }
 }
 
-@media (max-width: 475px) {
+@media (max-width: 490px) {
     body > header {
         flex-direction: column;
     }
@@ -34,4 +34,9 @@
         flex-direction: column;
         justify-content: center;
     }
+
+    form.search-form h1 {
+        margin-bottom: 15px;
+    }
+
 }

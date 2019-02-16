@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{ object.titre }}
+{% endblock %}
+{% block main_content %}
+    <div class="page-limiter">
+        <h1 class="movie-title">{{ object.titre }}</h1>
+        <span>
+            {{ object.dateSortie }}
+        </span>
+        <p>
+            {{ object.synospis }}
+        </p>
+        <div class="tri-container">
+            {% block tri %}
+
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}
